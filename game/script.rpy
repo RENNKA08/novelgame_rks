@@ -1,56 +1,53 @@
-﻿# このファイルにはゲームのスクリプトを記述します。
+﻿init python:
+    import ourModule # 何かショートカットコードを作るならここへ
 
-# Ren'Py のスクリプトは、インデント（行頭の空白）によってブロック分けされています。
-# インデントは Tab や Shift + Tab によって調整することができます。
+# 標準位置設定
+transform C:
+    xalign 0.5
+    yalign 1.0
 
+transform Cdown:
+    xalign 0.5
+    yalign 0.5
 
-# まず最初に、ゲームに使うキャラクター（台詞を表示するオブジェクト）を定義します。
-# 一番目のパラメーターは、テキストウィンドウに表示されるキャラクターの名前です。
-# color のパラメーターを追加すると、キャラクターの名前を色付けできます。
+transform Cbig:
+    xalign 0.5
+    yalign -1
 
-define e = Character('Eileen', color="#c8ffc8")
+# 登場人物
+## ナレーション
+define nal = Character("天の声", color="#ffffff")
+## 名前未登場キャラ
+define unknown = Character("???", color="#ffffff")
+## 主人公
+define you = Character("あなた", color="#ffffff")
+## ヒロイン
+### フォレスト
+define hi_f = Character("フォレスト", color="#ffffff")
+### コラーニング１
+define hi_c1 = Character("コラーニング１", color="#ffffff")
+### コラーニング２
+define hi_c2 = Character("コラーニング２", color="#ffffff")
+### メディアライブラリー
+define hi_m = Character("メディアライブラリー", color="#ffffff")
 
-
-# label ステートメント（文）はゲームの処理をまとめてラベル付けします。
-# ラベル間の移動は jump ステートメントか call ステートメントを使います。
-
-# ゲームは start ラベルからスタートします。
+# 立ち絵準備
+# unknow
+# image im unknow = im.FactorScale("images/characters//", width=1.0)
+# you
+# image im you = im.FactorScale("images/characters//", width=1.0)
+#フォレスト
+# image im forest = im.FactorScale("images/characters//", width=1.0)
 
 label start:
 
-    # 背景を表示します。デフォルトではプレースホルダー（仮画像）を使用しますが、
-    # images ディレクトリーにファイル（ファイル名は "bg room.png" や "bg room.jpg"）
-    # を追加することで表示できます。
-
     scene bg room
 
-    # スプライト（立ち絵）を表示します。ここではプレースホルダーを使用していますが、
-    # images ディレクトリーに "eileen happy.png" などと命名したファイルを追加すると
-    # 表示することができます。
-
-    # at ステートメントは画像の表示する位置を調整します。
-    # at center は中央に下揃えで表示します。これは省略しても同じ結果になります。
-    # その他に at right、at left などがデフォルトで定義されています。
-
-    show eileen happy at center
-
-    # トランジション（画面遷移効果）を使って表示を画面に反映させます。
-    # 台詞を表示するか with None を使うと、トランジション無しで直ちに表示します。
+    nal "あなたはこの物語で誰と恋をする？"
 
     with dissolve
 
-    # 音楽を再生します。
-    # game ディレクトリーに "music.ogg" などのファイルを追加すると再生できます。
-
-    # play music "music.ogg"
-
-    # 以下は台詞を表示します。
-
-    e "Ren'Py の新しいゲームを作成しました。"
-
-    e "ストーリー、画像、音楽を追加すれば、世界にリリースすることができます！"
-
-    # return でゲームを終了します。
+    jump name
 
     return
 
