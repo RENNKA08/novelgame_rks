@@ -1,9 +1,12 @@
 label apl_week_third:
-    scene bg room
+    scene bg school
 
     nal "4月 第3週"
 
     "俺がフォレストハウスの教室に入ると、すでにフォレストハウスは席についていた"
+
+    show im forest at Cdown
+
     hi_f "思ってたより、朝の用意が早く終わってね。家でゆっくりしてても良かったんだけど、べつにすることもないし、いいかなって"
     you "なに読んでるんだ？"
     hi_f "これ？　恋愛小説よ"
