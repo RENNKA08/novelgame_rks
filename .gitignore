@@ -1,6 +1,7 @@
 log.txt
 script.rpyc
 **/*.rpyc
+**/*.rpy
 game/saves
 game/cache
 game/tl
