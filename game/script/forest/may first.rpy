@@ -1,5 +1,5 @@
 label may_week_first:
-    scene bg room
+    scene bg school
 
     nal "5月 第1週"
 
