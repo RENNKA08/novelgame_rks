@@ -1,4 +1,5 @@
 label name:
+    scene bg onn
     define pov = Character("[povname]")
 
 python:

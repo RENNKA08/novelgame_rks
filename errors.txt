@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-The label apl_week_second is defined twice, at
-  File "game/script/forest/apl second.rpy", line 1 and
-  File "game/script/forest/may second.rpy", line 1.
+File "game/script/forest/apl second.rpy", line 14: choice menuitem expects a non-empty block.
+    "授業開始時刻前の静まる教室の中、一人でフォレストハウスは笑っていた……今のお前の方がバカみたいだぞ、フォレストハウス":
+                                                                 ^
 
 Ren'Py Version: Ren'Py 7.3.5.606
-Wed Dec 11 18:56:56 2019
+Tue Feb 04 19:40:31 2020

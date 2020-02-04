@@ -36,12 +36,16 @@ define hi_m = Character("メディアライブラリー", color="#ffffff")
 # image im unknow = im.FactorScale("images/characters//", width=1.0)
 # you
 # image im you = im.FactorScale("images/characters//", width=1.0)
-#フォレスト
-# image im forest = im.FactorScale("images/characters//", width=1.0)
+# フォレスト
+image im forest = im.FactorScale("images/characters/gibara/gibara.png", width=0.55)
+image im2 forest = im.FactorScale("images/characters/gibara/mameshiba.png", width=0.55)
+
+# 変数
+default point = 0
 
 label start:
 
-    scene bg room
+    scene bg onn
 
     nal "あなたはこの物語で誰と恋をする？"
 
