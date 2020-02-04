@@ -1,5 +1,5 @@
 label apl_week_third:
-    scene bg room
+    scene bg school
 
     nal "4月 第3週"
 
